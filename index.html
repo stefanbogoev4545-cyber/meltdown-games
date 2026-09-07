@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meltdown Games</title>
+<meta name="description" content="Single-file HTML5 arcade games. Play free in your browser.">
+<style>
+  :root {
+    --bg:#07080d; --bg2:#0d0f18; --fg:#fff; --dim:rgba(255,255,255,.5);
+    --line:rgba(255,255,255,.10); --gold:#FFD166; --green:#5EE6A8;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background:var(--bg); color:var(--fg); min-height:100vh;
+    font-family:"Segoe UI", system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255,140,60,.13), transparent 70%);
+  }
+  .wrap { max-width:760px; margin:0 auto; padding:12vh 24px 80px; }
+  h1 { font-size:clamp(38px,9vw,68px); font-weight:900; letter-spacing:-.02em; }
+  .tag { color:var(--dim); margin-top:10px; font-size:clamp(15px,2.4vw,18px); }
+  .games { margin-top:52px; display:grid; gap:16px; }
+  a.card {
+    display:block; padding:22px 24px; border:1px solid var(--line); border-radius:14px;
+    background:var(--bg2); text-decoration:none; color:inherit; transition:.18s ease;
+  }
+  a.card:hover { border-color:rgba(255,209,102,.45); transform:translateY(-2px); background:#11131e; }
+  .row { display:flex; align-items:baseline; justify-content:space-between; gap:14px; flex-wrap:wrap; }
+  .name { font-size:23px; font-weight:800; letter-spacing:-.01em; }
+  .play { color:var(--gold); font-weight:800; font-size:14px; white-space:nowrap; }
+  .desc { color:var(--dim); margin-top:8px; font-size:15px; line-height:1.55; }
+  .meta { margin-top:14px; display:flex; gap:8px; flex-wrap:wrap; }
+  .chip {
+    font-size:11.5px; font-weight:700; letter-spacing:.04em; padding:4px 9px;
+    border-radius:99px; background:rgba(255,255,255,.06); color:rgba(255,255,255,.62);
+  }
+  .chip.hot { background:rgba(255,209,102,.13); color:var(--gold); }
+  footer { margin-top:60px; padding-top:24px; border-top:1px solid var(--line); color:rgba(255,255,255,.34); font-size:13.5px; line-height:1.7; }
+  footer a { color:rgba(255,255,255,.55); }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) { --bg:#f6f6f4; --bg2:#fff; --fg:#12131a; --dim:#5b5f6e; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Meltdown Games</h1>
+  <p class="tag">Free browser games. No download, no signup — tap and play.</p>
+
+  <div class="games">
+    <a class="card" href="meltdown/">
+      <div class="row"><span class="name">MELTDOWN</span><span class="play">PLAY →</span></div>
+      <p class="desc">Push a reactor past safe output. Every injection pays more and gets harder — eject with your yield, or lose all of it. Four other operators are in with you, and only the highest output takes the pot.</p>
+      <div class="meta">
+        <span class="chip hot">FLAGSHIP</span><span class="chip">5 ZONES</span>
+        <span class="chip">BOSSES</span><span class="chip">DAILY CHALLENGE</span>
+      </div>
+    </a>
+
+    <a class="card" href="locked-in-stack/">
+      <div class="row"><span class="name">LOCKED IN</span><span class="play">PLAY →</span></div>
+      <p class="desc">One-tap tower stacker. Land each block flush for a perfect and the tower grows back — miss and it shrinks until there's nothing left to stand on.</p>
+      <div class="meta"><span class="chip">ONE TAP</span><span class="chip">ENDLESS</span></div>
+    </a>
+
+    <a class="card" href="nerve/">
+      <div class="row"><span class="name">NERVE</span><span class="play">PLAY →</span></div>
+      <p class="desc">The original prototype MELTDOWN grew out of. Stop the sweep in the gold, watch the multiplier climb, and decide when to walk away.</p>
+      <div class="meta"><span class="chip">PROTOTYPE</span></div>
+    </a>
+  </div>
+
+  <footer>
+    Works on phone and desktop. Progress saves in your browser.<br>
+    Source: <a href="https://github.com/stefanbogoev4545-cyber/meltdown-games">github.com/stefanbogoev4545-cyber/meltdown-games</a>
+  </footer>
+</div>
+</body>
+</html>
